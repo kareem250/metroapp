@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
+
 class Images extends StatelessWidget {
   const Images({super.key});
 
@@ -8,16 +9,16 @@ class Images extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('metro image'),
+        title: Text('metro images'),
         backgroundColor: Color(0xFF42A5F5),
         centerTitle: true,
       ),
       body: Center(
-        child:
-PhotoView(imageProvider:AssetImage('assets/images/my.png'),
+        child: PhotoView(
+          imageProvider: AssetImage('assets/images/my.png'),
           minScale: PhotoViewComputedScale.contained,
           maxScale: PhotoViewComputedScale.covered,
-      ),
+        ),
       ),
     );
   }
